@@ -1,7 +1,13 @@
 /* -------------JOIN US------------- */
 
 .join-us {
-  margin-left: 70px;
+  @include mq(mobile-only) {
+    margin-top: 60px;
+  }
+
+  @include mq(desktop) {
+    margin-left: 70px;
+  }
 }
 
 .join-us__title {

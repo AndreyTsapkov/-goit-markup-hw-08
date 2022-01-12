@@ -1,5 +1,6 @@
 @import './utils/variables';
 @import './utils/placeholders';
+@import './utils/mixins';
 @import './base/global-styles';
 
 @import './components/repeatable/frame';
@@ -8,6 +9,7 @@
 @import './components/repeatable/button-close';
 @import './components/repeatable/button-filter';
 @import './components/repeatable/socials';
+@import './components/repeatable/mobile-menu';
 
 @import './components/header/page-header';
 @import './components/header/site-nav';

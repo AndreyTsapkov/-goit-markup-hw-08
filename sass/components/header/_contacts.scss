@@ -1,13 +1,25 @@
 /* -------------CONTACTS------------- */
 
 .contacts {
-  display: flex;
-  align-items: center;
+  @include mq(mobile-only) {
+    display: none;
+  }
+
+  @include mq(desktop) {
+    display: flex;
+  }
 }
 
 .contacts__item {
-  &:not(:last-child) {
-    margin-right: 50px;
+  @include mq(tablet-only) {
+    &:first-child {
+      margin-bottom: 10px;
+    }
+  }
+  @include mq(desktop) {
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
   }
 }
 
@@ -16,14 +28,17 @@
   align-items: center;
 
   color: inherit;
-  padding-top: 32px;
-  padding-bottom: 32px;
   font-weight: 500;
   letter-spacing: 0.02em;
 
   &:hover,
   &:focus {
     color: getColor('accent-color');
+  }
+
+  @include mq(desktop) {
+    padding-top: 32px;
+    padding-bottom: 32px;
   }
 }
 

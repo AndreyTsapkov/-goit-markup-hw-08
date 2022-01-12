@@ -5,8 +5,6 @@
   flex-direction: column;
   align-items: flex-start;
 
-  position: relative;
-
   font-size: 12px;
   letter-spacing: 0.01em;
 
@@ -16,10 +14,11 @@
 }
 
 .modal__label {
+  position: relative;
+
+  width: 100%;
   font-weight: 400;
-  margin-bottom: 4px;
-  font-size: 12px;
-  letter-spacing: 0.01em;
+  margin-top: 4px;
 }
 
 .modal__input {
@@ -29,7 +28,7 @@
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  outline: 0;
+  outline: none;
 
   transition: border-color var(--animation-duration) var(--animation-timing-function);
 
@@ -41,7 +40,7 @@
 
 .modal__icon {
   position: absolute;
-  top: 50%;
+  bottom: 28%;
   left: 12px;
 
   transition: fill var(--animation-duration) var(--animation-timing-function);
@@ -78,11 +77,20 @@
 
 .modal__agree {
   @extend %flex-center;
+  flex-wrap: wrap;
   margin-top: 20px;
   margin-bottom: 30px;
 
   line-height: 1.71;
   user-select: none;
+
+  @include mq(notDesktop) {
+    font-size: 12px;
+  }
+  @include mq(desktop) {
+    font-size: inherit;
+    line-height: 1.71;
+  }
 }
 
 .modal__agree-checkbox {
@@ -119,6 +127,6 @@
 }
 
 .modal__agree-link {
-  margin-left: 5px;
+  margin-left: 3px;
   text-decoration: underline;
 }
